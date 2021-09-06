@@ -18,17 +18,17 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-        <Text style={styles.heading}>TODO LIST</Text>
+      <Text style={styles.heading}>TODO LIST</Text>
       <ScrollView style={styles.scrollView}>
         {
-        tasks.map((task, index) => {
-          return (
-            <View key={index} style={styles.taskContainer}>
-              <TaskItem index={index + 1} task={task} deleteTask={() => deleteTask(index)}/>
-            </View>
-          );
-        })
-      }
+          tasks.map((task, index) => {
+            return (
+              <View key={index} style={styles.taskContainer}>
+                <TaskItem index={index + 1} task={task} deleteTask={() => deleteTask(index)}/>
+              </View>
+            );
+          })
+        }
       </ScrollView>
       <TaskInputField addTask={addTask}/>
     </View>
